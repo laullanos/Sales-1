@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Sales.Helpers"
+             x:Class="Sales.Views.AddProductPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="{i18n:Translate AddProduct}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding AddProduct}"
+            Padding="5">
+            <Image
+                Source="noproduct">
+            </Image>
+            <Label
+                HorizontalOptions="Center"
+                FontSize="Small"
+                Text="{i18n:Translate NoImage}">
+            </Label>
+            <Label
+                Text="{i18n:Translate Description}">
+            </Label>
+            <Entry
+                Text="{Binding Description}"
+                Placeholder="{i18n:Translate DescriptionPlaceholder}">
+            </Entry>
+            <Label
+                Text="{i18n:Translate Price}">
+            </Label>
+            <Entry
+                Keyboard="Numeric"
+                Text="{Binding Price}"
+                Placeholder="{i18n:Translate PricePlaceholder}">
+            </Entry>
+            <Label
+                Text="{i18n:Translate Remarks}">
+            </Label>
+            <Editor
+                Text="{Binding Remarks}">
+            </Editor>
+            <ActivityIndicator
+                IsRunning="{Binding IsRunning}">
+            </ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
