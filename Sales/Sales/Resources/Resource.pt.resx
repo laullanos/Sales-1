@@ -153,4 +153,13 @@
   <data name="PricePlaceholder" xml:space="preserve">
     <value>Digite o preço do produto ...</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>É necessário inserir uma descrição</value>
+  </data>
+  <data name="PriceError" xml:space="preserve">
+    <value>Você deve inserir um preço maior que zero.</value>
+  </data>
 </root>

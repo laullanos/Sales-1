@@ -72,5 +72,20 @@
         {
             get { return Resource.Remarks; }
         }
+
+        public static string Save
+        {
+            get { return Resource.Save; }
+        }
+
+        public static string PriceError
+        {
+            get { return Resource.PriceError; }
+        }
+
+        public static string DescriptionError
+        {
+            get { return Resource.DescriptionError; }
+        }
     }
 }
