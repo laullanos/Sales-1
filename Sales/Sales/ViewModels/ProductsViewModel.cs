@@ -1,7 +1,9 @@
 ﻿namespace Sales.ViewModels
 {
+    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Linq;
     using System.Windows.Input;
     using Common.Models;
     using GalaSoft.MvvmLight.Command;
@@ -18,6 +20,8 @@
         #endregion
 
         #region Properties
+        public List<Product> MyProducts { get; set; }
+
         private ObservableCollection<Product> products;
 
         public ObservableCollection<Product> Products
@@ -80,9 +84,14 @@
                 return;
             }
 
-            var list = (List<Product>)response.Result;
-            this.Products = new ObservableCollection<Product>(list);
+            this.MyProducts = (List<Product>)response.Result;
+            this.RefreshList();
             this.IsRefreshing = false;
+        }
+
+        public void RefreshList()
+        {
+            this.Products = new ObservableCollection<Product>(MyProducts.OrderBy(p => p.Description));
         }
         #endregion
 
