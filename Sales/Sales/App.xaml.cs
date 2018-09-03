@@ -4,7 +4,9 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Sales
 {
+    using Helpers;
     using Views;
+    using ViewModels;
 
     public partial class App : Application
     {
@@ -12,7 +14,16 @@ namespace Sales
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ProductsPage());
+            if (Settings.IsRemembered)
+            {
+                MainViewModel.GetInstance().Products = new ProductsViewModel();
+                this.MainPage = new NavigationPage(new ProductsPage());
+            }
+            else
+            {
+                MainViewModel.GetInstance().Login = new LoginViewModel();
+                this.MainPage = new LoginPage();
+            }
         }
 
         protected override void OnStart()
