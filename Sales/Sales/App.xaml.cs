@@ -10,6 +10,11 @@ namespace Sales
 
     public partial class App : Application
     {
+        #region Properties
+        public static NavigationPage Navigator { get; internal set; }
+        #endregion
+
+        #region Constructors
         public App()
         {
             InitializeComponent();
@@ -17,7 +22,7 @@ namespace Sales
             if (Settings.IsRemembered)
             {
                 MainViewModel.GetInstance().Products = new ProductsViewModel();
-                this.MainPage = new NavigationPage(new ProductsPage());
+                this.MainPage = new MasterPage();
             }
             else
             {
@@ -25,7 +30,9 @@ namespace Sales
                 this.MainPage = new LoginPage();
             }
         }
+        #endregion
 
+        #region Methods
         protected override void OnStart()
         {
             // Handle when your app starts
@@ -40,5 +47,6 @@ namespace Sales
         {
             // Handle when your app resumes
         }
+        #endregion
     }
 }

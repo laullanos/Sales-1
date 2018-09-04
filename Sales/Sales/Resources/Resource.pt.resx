@@ -234,4 +234,16 @@
   <data name="SomethingWrong" xml:space="preserve">
     <value>O e-mail ou senha não são válidos.</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Fechar sessão</value>
+  </data>
 </root>

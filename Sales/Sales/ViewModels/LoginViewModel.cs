@@ -130,7 +130,7 @@
             this.Password = string.Empty;
 
             MainViewModel.GetInstance().Products = new ProductsViewModel();
-            Application.Current.MainPage = new NavigationPage(new ProductsPage());
+            Application.Current.MainPage = new MasterPage();
         }
         #endregion
     }

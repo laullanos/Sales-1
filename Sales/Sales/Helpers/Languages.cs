@@ -207,5 +207,25 @@
         {
             get { return Resource.SomethingWrong; }
         }
+
+        public static string Menu
+        {
+            get { return Resource.Menu; }
+        }
+
+        public static string Setup
+        {
+            get { return Resource.Setup; }
+        }
+
+        public static string About
+        {
+            get { return Resource.About; }
+        }
+
+        public static string Exit
+        {
+            get { return Resource.Exit; }
+        }
     }
 }
